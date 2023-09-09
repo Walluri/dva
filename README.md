@@ -32,3 +32,8 @@
    - CLI - via  Access Keys
    - SDK - In application code via Access keys [For Example Javascript SDK will be embeded into your application code]
    - The AWS cli that we use is built on top of AWS SDK for Python i.e Boto
+   - Some aws cli commands
+   - - aws configure --profile profileabc
+     - aws configure list-profiles
+    
+9. IAM Roles for Services
