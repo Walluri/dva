@@ -13,5 +13,5 @@
 
 4. We also attach policies (permissions) to users or groups.
 5. If we see this in the top it means you have looged in as a user created by the root account.
-Account ID: 1223-1233-1234
-IAM user: iamadmin
+- Account ID: 1223-1233-1234
+- IAM user: iamadmin
