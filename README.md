@@ -15,3 +15,4 @@
 5. If we see this in the top it means you have looged in as a user created by the root account.
 - Account ID: 1223-1233-1234
 - IAM user: iamadmin
+- And the account name will be displayed as : iamanuser @ da1general
