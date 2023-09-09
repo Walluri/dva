@@ -26,3 +26,8 @@
    - By, selecting an AWS managed policy
    - By, attaching a Customer managed policy
    - By, creating an inline policy.
+
+8. AWS Access mechanism
+   - Management console - username/password/MFA
+   - CLI - via  Access Keys
+   - SDK - In application code via Access keys
