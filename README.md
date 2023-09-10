@@ -67,6 +67,10 @@
    - Type : [RSA encrypted private and public key pair / ED25519]
    - Private key file format : [ .pem(OpenSSh), .ppk(PuTTY)]
 
-4. Security Group : Controls traffic from and to the EC2 instance. So we can add rules.
+4. Security Group : 
+    - Controls traffic from and to the EC2 instance. So we can add rules.
+    - They are the fundamental of network security in AWS.
+    - Security groups only contain ALLOW rules. So we only say what the is ALLOWED to go or to go out.
+    - This means we can't explicitly deny 
 5. IP: After you stop and start an instance -  Th public ip changes the private ip does not change.
 6. **Note** : Instance types : Do we have to read
