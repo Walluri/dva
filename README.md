@@ -61,4 +61,8 @@
    - This can be done with **EC2 User data** script.
    - when does this script run ? : It runs only once at the instance first launch.
    - What do you want to do in the script ? : install updates, install software, download files from the internet.
-   - ** asdf**
+   - Note : EC2 user data script runs with the root user.
+  
+3. Key pair
+   - Type : [RSA encrypted private and public key pair / ED25519]
+   - Private key file format : [ .pem(OpenSSh), .ppk(PuTTY)] 
