@@ -58,4 +58,5 @@
    - Scaling the services using an Auto scaling group (ASG).
 2. EC2 User Data
    - bootstraping instance means - launching commands when the machine starts.
-   - This can be done with EC2 User data script.
+   - This can be done with **EC2 User data** script.
+   - 
