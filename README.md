@@ -37,3 +37,5 @@
      - aws configure list-profiles
     
 9. IAM Roles for Services
+    - Some AWS services on our AWS account will need to perform certain actions on certain resources on our behalf.
+    - So we need to assign permissions to AWS services - so we create an IAM role.
