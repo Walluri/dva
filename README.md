@@ -71,6 +71,7 @@
     - Controls traffic from and to the EC2 instance. So we can add rules.
     - They are the fundamental of network security in AWS.
     - Security groups only contain ALLOW rules. So we only say what the is ALLOWED to go or to go out.
-    - This means we can't explicitly deny 
+    - This means we can't explicitly deny.
+    - The rule can be mentioned with Ip address / or by other security groups.
 5. IP: After you stop and start an instance -  Th public ip changes the private ip does not change.
 6. **Note** : Instance types : Do we have to read
