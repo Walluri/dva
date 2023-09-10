@@ -49,3 +49,7 @@
 1. Normally the billing dashboard [when you click on the tip right ] will only be accessible to the root user.
 2. Even if you have administrator permissions, you wont be able to see them billing details like which service took how much and the grand total bill etc
 3. So After we login with root user - go to billing dashboard - and explicitly say that Iam users can also access the billing dashboard. [Then the users with the right permissions can access the billing details.]
+
+## EC2
+1. Consists of 4 main functionalities.
+   - 
