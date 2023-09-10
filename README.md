@@ -41,4 +41,4 @@
     - So we need to assign permissions to AWS services - so we create an IAM role.
     - These roles are intended to be used by AWS services.
     - While creating a role
-    - - you
+       - you
