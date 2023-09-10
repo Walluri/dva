@@ -68,4 +68,4 @@
    - Private key file format : [ .pem(OpenSSh), .ppk(PuTTY)]
 
 4. Security Group : Controls traffic from and to the EC2 instance. So we can add rules.
-5. IP: After you stop and start an instance -  Th public ip changes.
+5. IP: After you stop and start an instance -  Th public ip changes the private ip does not change.
