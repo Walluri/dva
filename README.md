@@ -52,4 +52,7 @@
 
 ## EC2
 1. Consists of 4 main functionalities.
-   - 
+   - Creating Virtual Machines : EC2
+   - Storing Data on virtual drives : EBS
+   - Distributing load across machines : ELB
+   - Scaling the services using an Auto scaling group (ASG).
