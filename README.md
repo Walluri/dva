@@ -59,4 +59,4 @@
 2. EC2 User Data
    - bootstraping instance means - launching commands when the machine starts.
    - This can be done with **EC2 User data** script.
-   - 
+   - when does this script run ? : It runs only once at the instance first launch.
