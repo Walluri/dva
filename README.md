@@ -67,4 +67,4 @@
    - Type : [RSA encrypted private and public key pair / ED25519]
    - Private key file format : [ .pem(OpenSSh), .ppk(PuTTY)]
 
-4. Security Group : Controls traffic from and to the EC2 instance. So we can add rules.
+4. Security Group : Controls traffic from and to the EC2 instance. So we can add rules. 
