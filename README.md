@@ -61,7 +61,7 @@
    - This can be done with **EC2 User data** script.
    - when does this script run ? : It runs only once at the instance **first launch**.
    - What do you want to do in the script ? : install updates, install software, download files from the internet.
-   - Note : EC2 user data script runs with the root user.
+   - **Note** : EC2 user data script runs with the root user.
   
 3. Key pair
    - Type : [RSA encrypted private and public key pair / ED25519]
@@ -69,3 +69,4 @@
 
 4. Security Group : Controls traffic from and to the EC2 instance. So we can add rules.
 5. IP: After you stop and start an instance -  Th public ip changes the private ip does not change.
+6. **Note** : Instance types : Do we have to read
