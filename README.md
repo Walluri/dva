@@ -73,5 +73,6 @@
     - Security groups only contain ALLOW rules. So we only say what the is ALLOWED to go or to go out.
     - This means we can't explicitly deny.
     - The rule can be mentioned with Ip address / or by other security groups.
+    - **Note** : Why are security groups locked down to a VPC ? 
 5. IP: After you stop and start an instance -  Th public ip changes the private ip does not change.
 6. **Note** : Instance types : Do we have to read
