@@ -80,6 +80,10 @@
       Port Range : All
       Destination: 0.0.0.0/0
       This means all kinds of outgoing traffic is allowed, by default.
+    - Refer Other security group.
+      Lets say, you have an EC2 instanceA with inbound rules via Security Group 1 and Security Group 2.
+      If there is other EC2 instanceB which has a security group 2, Then we dont have to explicitly get the IP of instanceB if instanceA wants to allow traffic from instanceB.
+
       
 
 
