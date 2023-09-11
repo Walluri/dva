@@ -152,3 +152,6 @@
      - EFS : ITs a network file system and we can attach it to 100's of 'LINUX' instances in one particular Region.
      - EFS : costlier thatn EBS
      - EFS : Can use the IA feature for cost savings.
+   
+## ELB + ASG
+1. Load balancing : A load balancer is a server or a set of servers that will forward received traffic to multiple downstream multiple instances.
