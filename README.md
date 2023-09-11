@@ -1,4 +1,4 @@
-# DVA
+    `# DVA
 
 ## Global Services
 1. IAM
@@ -97,5 +97,5 @@
 
 7. **Note** : Instance types : Do we have to read
 
-8. EC2 Instance Storage section.
+8. EC2 Instance Storage options.
 
