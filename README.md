@@ -98,4 +98,5 @@
 7. **Note** : Instance types : Do we have to read
 
 8. EC2 Instance Storage options.
+   - EBS : Elastic Block Store which you can attach to your instances while they are running.
 
