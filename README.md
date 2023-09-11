@@ -146,3 +146,5 @@
      - EBS : For GP2 volumes the IO increases if the disk size increases
      - EBS : For IO1 type volumes the IO can increase independently.
      - EBS : To migrate a volume we take snapshots.
+     - EBS : When running backups they consume a lot of IO, so do not do the backup's when you have high traffic.
+     - EBS : Root EBS volumes of instances gets terminated by default along with the EC2 instance.
