@@ -139,4 +139,10 @@
     - Internally uses the NFS protocol to communicate.
     - Uses Secutiry Goup to control accessto EFS.
     - Compatible with only linux based AMI's.
-    -  
+
+14.  EBS vs EFS
+     - EBS : EBS volumes attach to one instance at a time expect when we use the multi attach feature of the io1 / io2
+     - EBS volumes are locked at AZ level
+     - EBS : For GP2 volumes the IO increases if the disk size increases
+     - EBS : For IO1 type volumes the IO can increase independently.
+     - EBS : To migrate a volume we take snapshots.
