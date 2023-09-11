@@ -100,7 +100,7 @@
 8. EC2 Instance Storage options.
    - EBS : Elastic Block Store which you can attach to your instances while they are running. [like a usb stick]
    - Good : The data is persisted even after the EC2 instance is terminated.
-   - Bad : They are locked to **AZ** and can be attached to only one EC2 instance at a time.
+   - Bad : They are locked to **AZ** (like EC2 instances) and can be attached to only one EC2 instance at a time.
    - EBS volume is like a network drive and so there might be latency, but detached to one instance and attached to another instance.
    - GB and IOPS have to be provisioned in advance, and you will be billed for what you have provisioned.
 
