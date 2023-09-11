@@ -98,7 +98,7 @@
 7. **Note** : Instance types : Do we have to read
 
 8. EC2 Instance Storage options.
-   - EBS : Elastic Block Store which you can attach to your instances while they are running.
+   - EBS : Elastic Block Store which you can attach to your instances while they are running. [like a usb stick]
    - Good : The data is persisted even after the EC2 instance is terminated.
    - Bad : They are regional and can be attached to only one EC2 instance at a time. 
 
