@@ -83,7 +83,7 @@
     - Refer Other security group.
       Lets say, you have an EC2 instanceA with inbound rules via Security Group 1 and Security Group 2.
       If there is other EC2 instanceB which has a security group 2, Then we dont have to explicitly get the IP of instanceB if instanceA wants to allow traffic from instanceB.
-
+    - **Note** : When ever there is a timeout while accessing a particular service in EC2 instance : It means there is an issue with the security group.
       
 
 
