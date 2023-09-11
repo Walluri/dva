@@ -148,3 +148,7 @@
      - EBS : To migrate a volume we take snapshots.
      - EBS : When running backups they consume a lot of IO, so do not do the backup's when you have high traffic.
      - EBS : Root EBS volumes of instances gets terminated by default along with the EC2 instance.
+
+     - EFS : ITs a network file system and we can attach it to 100's of 'LINUX' instances in one particular Region.
+     - EFS : costlier thatn EBS
+     - EFS : Can use the IA feature for cost savings.
