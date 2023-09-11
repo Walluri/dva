@@ -121,5 +121,17 @@
     - Risk of data loss : If hardware fails.
 
 11. **EBS volume types**
+    GP2 / GP3
+    IO1/IO2
 
-12.
+12. IO1 / IO2 family with multi attach.
+    - We can attach the same EBS volume to multiple EC2 instances, with in AZ
+    - Not more than 16 instances at a time.
+
+13. Amazon EFS : Elastic File system.
+    - This is a managed NFS.
+    - This can be mounted into many EC2 instances, which can be in different AZ's.
+    - Highly available
+    - Scalable
+    - Expensive : 3 times GP2
+    - But, we pay per use.
