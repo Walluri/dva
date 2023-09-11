@@ -68,14 +68,14 @@
    - Private key file format : [ .pem(OpenSSh), .ppk(PuTTY)]
 
 4. Security Group : 
-    - Theyt are like a firewal outside and EC2 instance.
-    - And, They Controls traffic from and to the EC2 instance. So we can add rules.
+    - They are like a firewal outside and EC2 instance.
+    - And, They Control traffic from and to the EC2 instance. So we can add rules.
     - They are the fundamental of network security in AWS.
     - Security groups only contain ALLOW rules. So we only say what the is ALLOWED to go or to go out.
     - This means we can't explicitly deny.
     - The rule can be mentioned with Ip address / or by other security groups.
     - **Note** : Why are security groups locked down to a VPC ?
-    - When trying to create a secutiry group, Ther will be default rule in the outbound rules : 
+    - When trying to create a security group, There will be default rule in the outbound rules : 
       Type : All Traffic [Protocol : All]
       Port Range : All
       Destination: 0.0.0.0/0
