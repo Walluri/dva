@@ -86,7 +86,7 @@
     - **Note** : When ever there is a timeout while accessing a particular service in EC2 instance : It means there is an issue with the security group.
 
 5. How do you connect to EC2 instance to perform maintenance activity.
-   - SSH : port 22 via public ip.
+   - SSH : port 22 via public ip + pem file.
    - EC2 instance connect.
    - Amazon ami has one user already setup - ec2-user
       
