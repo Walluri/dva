@@ -97,5 +97,5 @@
 
 7. **Note** : Instance types : Do we have to read
 
-8. 
+8. EC2 Instance Storage section.
 
