@@ -91,6 +91,7 @@
    - Amazon ami has one user already setup - ec2-user + it comes with the aws cli.
    - Using the aws cli - you can run aws configure and update you access key id and secret access key.But that is a bad idea as other users who ssh to your machine can hands on them.
    - Alternatively use IAM roles.
+   - **Note:** : 43 (EC2 Instance purchainsg options ?? needed for exam?
 
 
 
