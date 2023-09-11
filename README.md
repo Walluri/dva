@@ -118,5 +118,5 @@
     - EC2 Instance store is an hard disk attached to the EC2 instance.
     - When do you need them : For better I/O performance.
     - Persistence ? : When you stop or terminate your EC2 instance - the storage will be lost. [**ephemeral storage ?? **]
-
+    - Risk of data loss : If hardware fails.
 
