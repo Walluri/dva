@@ -103,4 +103,5 @@
    - Bad : They are locked to **AZ** (like EC2 instances) and can be attached to only one EC2 instance at a time.
    - EBS volume is like a network drive and so there might be latency, but detached to one instance and attached to another instance.
    - GB and IOPS have to be provisioned in advance, and you will be billed for what you have provisioned.
+   - There is a root volume associated with EC2 instance, you can configure that it should not be deleted when EC2 is terminated.
 
