@@ -135,3 +135,5 @@
     - Scalable
     - Expensive : 3 times GP2
     - But, we pay per use.
+    - **USE cases** : content management / Data sharing / web serving / wordpress
+    - 
