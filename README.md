@@ -130,10 +130,13 @@
 
 13. Amazon EFS : Elastic File system.
     - This is a managed NFS.
-    - This can be mounted into many EC2 instances, which can be in different AZ's.
+    - This can be mounted into **many** EC2 instances, which can be in different AZ's. Ex 1000s of cuncurrent NFS clients with 10GB+ / sec throughput.
     - Highly available
     - Scalable
     - Expensive : 3 times GP2
     - But, we pay per use.
     - **USE cases** : content management / Data sharing / web serving / wordpress
-    - 
+    - Internally uses the NFS protocol to communicate.
+    - Uses Secutiry Goup to control accessto EFS.
+    - Compatible with only linux based AMI's.
+    -  
