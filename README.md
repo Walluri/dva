@@ -128,7 +128,7 @@
     - We can attach the same EBS volume to multiple EC2 instances, with in AZ
     - Not more than 16 instances at a time.
 
-13. Amazon EFS : Elastic File system.
+13. **Revisit and do hands on: Amazon EFS** : Elastic File system.
     - This is a managed NFS.
     - This can be mounted into **many** EC2 instances, which can be in different AZ's. Ex 1000s of cuncurrent NFS clients with 10GB+ / sec throughput.
     - Highly available
