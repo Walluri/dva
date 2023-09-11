@@ -87,7 +87,7 @@
 
 5. How do you connect to EC2 instance to perform maintenance activity.
    - SSH : port 22 via public ip + pem file.
-   - EC2 instance connect : A browser based SSh connection into Ec2 instance.
+   - EC2 instance connect : A browser based SSh connection into EC2 instance.A temporary SSh key will be uploaded by AWS via the browser.
    - Amazon ami has one user already setup - ec2-user
       
 
