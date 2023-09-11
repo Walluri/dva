@@ -102,5 +102,5 @@
    - Good : The data is persisted even after the EC2 instance is terminated.
    - Bad : They are locked to AZ and can be attached to only one EC2 instance at a time.
    - EBS volume is like a network drive and so there might be latency, but detached to one instance and attached to another instance.
-   - 
+   - GB and IOPS have to be provisioned in advance.
 
