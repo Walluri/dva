@@ -99,4 +99,5 @@
 
 8. EC2 Instance Storage options.
    - EBS : Elastic Block Store which you can attach to your instances while they are running.
+   - The data is persisted even after the EC2 instance is terminated. 
 
