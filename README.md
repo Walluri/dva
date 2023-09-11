@@ -93,8 +93,9 @@
    - Alternatively use IAM roles.
    - **Note:** : 43 (EC2 Instance purchainsg options ?? needed for exam?
 
+6. IP: After you stop and start an instance -  Th public ip changes the private ip does not change.
 
+7. **Note** : Instance types : Do we have to read
 
+8. 
 
-5. IP: After you stop and start an instance -  Th public ip changes the private ip does not change.
-6. **Note** : Instance types : Do we have to read
