@@ -107,5 +107,8 @@
 
 9. EBS snapshots
     - Its a backup of the EBS volume.
+    - We can copy this EBS snapshots across AZ or Regions.
+    - Save Money : You can move a snapshot to an archive tier which is 75% cheaper, with 24 - 72 hours to restore.
+    - Accidental deletion : You can still recover the deleted one with in 1 year. 
 
 
