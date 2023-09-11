@@ -106,9 +106,13 @@
    - There is a root volume associated with EC2 instance, you can configure that it should not be deleted when EC2 is terminated.
 
 9. EBS snapshots
-    - Its a backup of the EBS volume.
+    - Its a backup of the EBS volume, for disaster recovery.
     - We can copy this EBS snapshots across AZ or Regions.
     - Save Money : You can move a snapshot to an archive tier which is 75% cheaper, with 24 - 72 hours to restore.
-    - Accidental deletion : You can still recover the deleted one with in 1 year. 
+    - Accidental deletion : You can still recover the deleted one with in 1 year, by setting a retention period from 1D-1Y.
+    - Restore data from Snapshot quickly? : FSR, Fast snapshot restore, but $$$.
+    - You can create snapshots from volumes and create volumes from snaoshots.
+      
+10.
 
 
