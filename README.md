@@ -90,6 +90,7 @@
    - EC2 instance connect : A browser based SSh connection into EC2 instance.A temporary SSh key will be uploaded by AWS via the browser.
    - Amazon ami has one user already setup - ec2-user + it comes with the aws cli.
    - Using the aws cli - you can run aws configure and update you access key id and secret access key.But that is a bad idea as other users who ssh to your machine can hands on them.
+   - Alternatively use IAM roles.
 
 
 
