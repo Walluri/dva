@@ -120,6 +120,6 @@
     - Persistence ? : When you stop or terminate your EC2 instance - the storage will be lost. [**ephemeral storage ?? **]
     - Risk of data loss : If hardware fails.
 
-11. ** 51 - EBS volume types **
+11. **EBS volume types**
 
 12.
