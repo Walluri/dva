@@ -155,3 +155,29 @@
    
 ## ELB + ASG
 1. Load balancing : A load balancer is a server or a set of servers that will forward received traffic to multiple downstream multiple instances.
+2. Why a load balancer ?
+   - Spread load across multiple instances.
+   - Single point DNS access to our application.
+   - Seamlessly handle failure to downstream instances, based on health check performances [port + route ].
+   - Provide SSL Termincation for websites **??**
+   - Enforce **stickyness** with cookies.
+   - High availability across AZ's.
+   - AWS will manage this load balancer.
+   - AWS Load balancer can be integrated with :  EC2, EC2 Autoscaling groups,  **ECS**, Route53, WAF etc
+3. Types of load balancers.
+   -   Classic load balancer : HTTP, HTTPS, TCP, SSL.
+   -   Application load Balancer : HTTP, HTTPS, Websocket
+   -   Network Load Balancer : TCP, TLS, UDP
+   -   Gateway Load Balancer : Layer 3 - IP Protocol.
+   -   Some load balancers can be set up as public / private too.
+4. Security of load balancers - Application Load Balancer.
+   -  Its a layer 7 load balancer (Http)
+   -  It allows you to route to traffic to multiple applications across machines[machines will be grouped into target groups].
+   -  We can even route traffic to multiple applications in the same machine Ex: containers
+   -  **Support for HTTP2 and websocket ?**
+   -   **Redirect traffic from HTTP to HTTPS**
+5. Routing - Application Load Balancer.
+   - Routing based on path in url : example.com/users OR example.com/posts
+   - Routing based on hostname in url : one.example.com and two.example.com
+   - Routing based on Query String OR even Headers.
+   - 
