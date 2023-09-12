@@ -207,4 +207,6 @@
     - Operates at Layer 3 : Network layer - IP packets.
 
 10. ELB - Sticky sessions
-    - 
+    - if client1 makes a second request to the ALB -> then the request will again be routed to same EC2 instance.
+    - This works for CLB,ALb,NLB.
+    - There is a cookie sent by the client, which has an expiry.
