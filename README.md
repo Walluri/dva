@@ -1,4 +1,4 @@
-     `# DVA
+      `# DVA
 
 ## Global Services
 1. IAM
@@ -232,4 +232,6 @@
     - Target Tracking scaling : Average CPU across all instances to stay around 40%.
     - Simple / Step scaling : We set up a cloudwatch alarm when average CPU of the instances in ASG go above 70% -> then a step to add 2 instances.
     - Schedules actions : increase the min capacity to 10 at Friday 5pm.
-    - Predictive scaling - based on patters. 
+    - Predictive scaling - based on patters.
+    - Scaling cooldown period : After a scaling activity happens we are in a cool down period.
+    - During this cooldown period ASG will not launch or terminate additional instances.
