@@ -201,4 +201,10 @@
    - There are instances where people use NLB to route traffic to ALB
    - Health check against : TCP / HTTP / HTTPS protocol.
    - When you create an NLB - aws will assign a fixed ipv4 address / or you can use your own elastic ip address.
-        
+
+9. Gateway Load Balancer:
+    - Analyses network traffic before forwarding to our application , it could drop the traffic also.
+    - Operates at Layer 3 : Network layer - IP packets.
+
+10. ELB - Sticky sessions
+    - 
