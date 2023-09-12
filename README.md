@@ -235,3 +235,21 @@
     - Predictive scaling - based on patters.
     - Scaling cooldown period : After a scaling activity happens we are in a cool down period.
     - During this cooldown period ASG will not launch or terminate additional instances.
+
+## RDS
+1. Relational database service.
+2. Its a managed database service - with SQL as a query language.
+3. We create databases in the cloud - that are managed by AWS.
+4. Types of Databases that are managed by AWS : [Postgres, MySQL, MariaDB, Oracle, Microsoft SQL server, Aurora]
+5. Continous backups are made - and we can restore to PIT.
+6. We have monitoring dashboards
+7. Performance : Read replicas to improve read performance
+8. Disaster recovery : Multi AZ setup
+9. Vertical scaling : By increasing the instance type
+10. Horizontal scaling : by adding read replicas.
+11. Storage is backed by EBS (GP2 or IO1)
+12. RDS Storage Autoscaling : If we are running out of storage space the services scales automatically.
+    - Maximum Storage Threshhold : we can set the maximum limit for DB storage.
+    - If you have 90% of storage filled + if this situation persists for more than 5 minutes + 6 hours have passed since last modification. Then storage is automatically modified.
+    - 
+
