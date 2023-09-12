@@ -1,4 +1,4 @@
-    `# DVA
+     `# DVA
 
 ## Global Services
 1. IAM
@@ -180,4 +180,25 @@
    - Routing based on path in url : example.com/users OR example.com/posts
    - Routing based on hostname in url : one.example.com and two.example.com
    - Routing based on Query String OR even Headers.
-   - 
+   - ALB's have a port mapping feature to redirect traffic to a dynamic port in ECS, they are a good fit for container based applications.
+6. Target Groups : Application load balancer.
+   - EC2 Instances :
+   - ECS Tasks.
+   - Lambda functions.
+   - ALB can even route traffic to private IP's
+7. Good things : ALB
+   - We get a fixed hostname with ALBs : abc.region.elb.amazonaws.com
+   - The application servers can see the the below details in the headers 
+        X-Forwarded-For: IP
+        X-forwarded-port : port
+        X-forwarded-proto : protocol
+8. Network Load Balancer:
+   - Operates at layer 4.
+   - Forwards TCP and UDP traffic
+   - millions of requests per second, with a latency of ~100ms
+   - If you want to be accessed with IPs ( static ip ) - NLB has one Static IP per AZ. And we can assign an elastic ip.
+   - **Target groups : EC2 instances , Private IP address also**
+   - There are instances where people use NLB to route traffic to ALB
+   - Health check against : TCP / HTTP / HTTPS protocol.
+   - When you create an NLB - aws will assign a fixed ipv4 address / or you can use your own elastic ip address.
+        
