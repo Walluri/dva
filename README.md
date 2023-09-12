@@ -229,4 +229,7 @@
     - we can specify a minimmum or maximum number of EC2 instances.
     - If you are pairing the ASG with a Load balancer - the instances as part of the ASG will be available to the ALB.
     - ASGs are free - we pay only for the underlying resources.
-    - 
+    - Target Tracking scaling : Average CPU across all instances to stay around 40%.
+    - Simple / Step scaling : We set up a cloudwatch alarm when average CPU of the instances in ASG go above 70% -> then a step to add 2 instances.
+    - Schedules actions : increase the min capacity to 10 at Friday 5pm.
+    - Predictive scaling - based on patters. 
