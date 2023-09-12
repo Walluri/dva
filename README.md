@@ -223,4 +223,10 @@
 
 12.  De-registration delay:
     - The Load balancer will give some time for your instances to complete inflight requests, while the instance is de-registered or marked unhealthy.
-13. ### Auto scaling group
+13. ###### Auto scaling group
+    - When we deploy our website - we might have more users at some time.
+    - The goal of an ASG is to scale out / in - i.e add EC2 instances to meet demand.
+    - we can specify a minimmum or maximum number of EC2 instances.
+    - If you are pairing the ASG with a Load balancer - the instances as part of the ASG will be available to the ALB.
+    - ASGs are free - we pay only for the underlying resources.
+    - 
