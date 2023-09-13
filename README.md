@@ -269,7 +269,9 @@
     - This is for disaster recovery.
     - Any change to the master is synchronously replicated to the standby instance : Only then the change is accepted.
     - The user application gets one DNS name and if the master fails - there will be automatic failover to the standby instance.
-    - 
+    - Hence we have an increased availability.
+    - The standby database os not used for scaling - no one can read from it, or write to it.
+    - if you have 15 read replicas - can you set one as a multi-az for disaster recovery ? : Yes.
 
 
 
