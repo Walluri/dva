@@ -272,7 +272,37 @@
     - Hence we have an increased availability.
     - The standby database os not used for scaling - no one can read from it, or write to it.
     - if you have 15 read replicas - can you set one as a multi-az for disaster recovery ? : Yes.
-
+    - **Amazon Aurora**
+    - Proprietary technology from AWS and not poen source.
+    - Postgres and MySQL are both compatible with Aurora.
+    - Performace : Aurora has 5X more performance of MySQL on RDS and 3X more performance of Postgres on RDS.
+    - Storage : Storage automatically grows in counts of 10gb upto 128TB.
+    - Read Replicas : Can have up to 15 read replicas with a replication process of upto 10ms.
+    - Cost : 20% more than RDS
+    - **Aurora High Availability and Read scaling.**
+    - When you write anything - Arora stores the data in  6 places across 3 AZs.
+    - i.e each Az (of the 3 AZs) will have 2 copies of your data.
+    - Aurora needs 4 copies of your 6 copies for writes, i.e even if 1 AZ is down thats fine.
+    - 3 out of 6  copies for reads.
+    - In Aurora we have a master and on top of the master we have 15 read replicas all serving reads - helps in read work loads.
+    - And any of this read replicas can become the master, if the master fails.
+    - But for RDS, There is a standby which will become the master / and remember the standby is always syncronously replicated.
+    - The read replicas support cross region replication.
+    - **Aurora as a cluster - how clients interact wit it - There si a shared storage volume ???**
+    - Writer endpoint is a dns name and client always talks to it.
+    - You can have autoscaling on read replicas... dynamic.. so reader endpoint.
+    - **RDS and Aurora Security**
+    - Data at rest can be encrypted in the RDS and Aurora database.
+    - Master and any replica will be encrypted using KMS.
+    - This encryption must be defined at launch time.
+    - And if master is not encrypted -p then the read replicas can not be encrypted.
+    - To encrypt an unencrypted database : Take a db snapshot, and then resore as encrypted.
+    - DB Authentication : username and password OR you can also use IAM roles to connect to database.
+    - Ex : If your IAM instance has an IAM role, It can authenticate to your db using that. This way you can manage security with in IAM.
+    - Security Groups : Used to control network access - we can allow specific  ports,IPs, and security groups.
+    - SSH Access : No SSH access because they are managed services. **[But SSH is there for RDS custom...!]**
+    - Logs : We can have audit logs enabled and sent to cloud watch (for longer retention) - so that we can know what queries are being made to RDS/Aurora.
+    - 
 
 
 
