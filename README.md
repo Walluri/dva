@@ -302,7 +302,16 @@
     - Security Groups : Used to control network access - we can allow specific  ports,IPs, and security groups.
     - SSH Access : No SSH access because they are managed services. **[But SSH is there for RDS custom...!]**
     - Logs : We can have audit logs enabled and sent to cloud watch (for longer retention) - so that we can know what queries are being made to RDS/Aurora.
-    - 
+    - **AMAZON RDS Proxy**
+    - We can deploy our RDS database with in our VPC.
+    - We can also deploy a Fully Managed RDS proxy for our Database in the VPC.
+    - RDS Proxy : This will allow you to pool and share the database connections established with the RDS database.
+    - Instead of having every single application connect to your RDS database instance, they connect to the proxy and the proxy will pool these connections together into less connections to the RDS database instance.
+    -  Why ? : If you have a lot of db connections to your rds db instance - This will reduce the stress on the database and thus increase the efficiency of db.
+    -  This will also reduce the number of open (active) connections and reduce timeouts.
+    -  The rds proxy is fully serverless and autoscaling and its Highly available (multi-az)
+    -  Failover of RDS database isntance : RDS proxy reduces the failover time when the switch to stand by instance happens by 66%.
+    -  
 
 
 
