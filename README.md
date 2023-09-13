@@ -251,5 +251,23 @@
 12. RDS Storage Autoscaling : If we are running out of storage space the services scales automatically.
     - Maximum Storage Threshhold : we can set the maximum limit for DB storage.
     - If you have 90% of storage filled + if this situation persists for more than 5 minutes + 6 hours have passed since last modification. Then storage is automatically modified.
+13. RDS Read Replicas and Multi AZ and the use cases for those.
+    - Let us say we have an application that reads and writes to a database.
+    - Read replicas help you to scale your reads.
+    - If the main database receives too many requests - the main db can not scale enough.
+    - So we can create up to 15 read replicas, and they can be with in the same AZ, cross AZ, or Cross Region.
+    - There will be an Asynchronous replication between the main RDS instance and the read replicas.
+    - So the application reading from a replica - might not have the latest data. This is called Eventual consistent.
     - 
+
+
+
+
+
+
+
+
+
+
+
 
