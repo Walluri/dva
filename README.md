@@ -311,7 +311,10 @@
     -  This will also reduce the number of open (active) connections and reduce timeouts.
     -  The rds proxy is fully serverless and autoscaling and its Highly available (multi-az)
     -  Failover of RDS database isntance : RDS proxy reduces the failover time when the switch to stand by instance happens by 66%.
-    -  
+    -  This means : instead of having all the applications connect to the main RDS instance and handle failover themselves.
+    -  There is another advantage of using RDS proxy : You can enforce IAM authentication to your Database **( And securely store its credentials in AWS Secrets Manager)**
+    -   Security : RXS proxy is only available in the VPC - enhanced security.
+    -   
 
 
 
