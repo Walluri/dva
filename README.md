@@ -258,8 +258,18 @@
     - So we can create up to 15 read replicas, and they can be with in the same AZ, cross AZ, or Cross Region.
     - There will be an Asynchronous replication between the main RDS instance and the read replicas.
     - So the application reading from a replica - might not have the latest data. This is called Eventual consistent.
+    - So, The read replicas are good for scaling reads.
+    - Now, A read replica can be promoted to their OWN database. The can take writes now and will be completely out of the replication mechanism. It will then have its own lifecycle afterwards.
+    - And our application must have a connection string updated to leverage all the read replicas.
+    - Ex : If a data team comes up to us and asks for running reporting in the production database - it will effect the production traffic on the DB.
+    - Networking cost with read replicas: normally there would be a cost if data moves with AZ.
+    - But, For RDS no fee for data replication with in AZ.
+    - But, If its a Cross Region replication - there will be replication fee.
+    - **RDS MultiAZ**
+    - This is for disaster recovery.
+    - Any change to the master is synchronously replicated to the standby instance : Only then the change is accepted.
+    - The user application gets one DNS name and if the master fails - there will be automatic failover to the standby instance.
     - 
-
 
 
 
