@@ -314,7 +314,52 @@
     -  This means : instead of having all the applications connect to the main RDS instance and handle failover themselves.
     -  There is another advantage of using RDS proxy : You can enforce IAM authentication to your Database **( And securely store its credentials in AWS Secrets Manager)**
     -   Security : RXS proxy is only available in the VPC - enhanced security.
-    -   
+    -   **Amazon elasticache**
+    -   The same we get RDS for Managed relational databases, Elasticache is helpful for getting managed Redis or Memcached
+    -   Caches are in memory databases with high performance and low latency.
+    -   Why : They help you in reducing the load off your database for read intensive workloads
+    -   Another use : You can application can become stateless by putting the state of your application into elasticache
+    -   Architecture # use case 1 : Applciation makes request to Elasticache, gets the data and called as a cache hit
+    -   If data is missing then app will make another request to db and write to cache - cache miss.
+    -   We would also need to invalidate cache at cettain intervals.
+    -   Architecture # usecase 2: User logs into one application and the app updates the session data in elasticache.
+    -   If user gets redirected to another application it can still use the same session data.
+    -   **Redis Vs Memcached**
+    -   Redis : MultiAZ with Auto Failover # Read replicas to scale reads + have high availability # Data durability using AOF persistence # Backup and restore Features.
+    -   Redis supports set and sorted sets
+    -   Memcaced : Multinode for partitioning of data - sharding # no replication (not higly available) # Non persistent # no backup and restore # multi threaded architecture.
+    -   **Amazon Memory DB for Redis**
+    -   Its a redis compatible, durable,in-memory database service.
+    -    Difference between redis and Amazon memory DB for redis is : Redis is intented to use a cache with some durability , memory db is really a database that has a redis compatible API.
+    -    It can reply with 160 mmillion requests per second.
+    -    Storage scales seamlessy from gbs to TBs.
+    -    Multi AZ transactional log ? : Stores data across multiple AZs to provide durability and fast recovery.
+
+## DNS
+1. DNS : a simple mapper of hostnames to ip address
+2. Domain Registrar : This is where we register our domain names. [Amazon Route53 / GoDaddy]
+3. DNS Records : A /AAAA / CNAME / NS / SOA
+4. Zone Files : Contains all DNS records [Ip to names ?]
+5. Name Servers : Servers that will resolve the DNS  queries. [Authoratative andn Non-Authoratative]
+6. Top Level Domains : TLD : .com / .us / .in / .gov / .org
+7. Second level domain : abc.com
+8. http://api.www.example.com.
+   - . is called Root.
+   - .com is called Top level Domain
+   - example.com is called second level domain
+   - www.example.com is called sub domain
+   - api.www.example.com is called fully qualified domain name
+   - http : protocol
+## Route53
+1.  A record : Hostname to IPv4 Address
+2.  AAAA - ipv6
+3.  CNAME : Map a hostname to another hostname; The target is a 'domain' name which must have an A record or AAAA record.
+4.  **Can not create a CNAME record for the top node of a DNS namespace(Zone Apex)**
+   - we can not create a CNAME for example.com
+   - we can create a CNAME for www.example.com
+5. NS : Name servers for the hosted zone.
+   - They are the DNS names or ip addresses of the servers that can respond to the DNS queries for your hosted zone. 
+
 
 
 
