@@ -374,6 +374,7 @@
    - Second option : We have alias records, which are specific to Route53.
    - But, They only allow you to point a hostname to a specific AWS Resource.
    - Ex : app.mydomain.com TO alb-1234.ap-southeast-2.elb.amazonaws.com
+   - These Alias records work for both root and non-root domains.
 
 
 
