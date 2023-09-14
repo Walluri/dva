@@ -369,9 +369,11 @@
    -  If we have an aws resource like Load balancer or Cloudfront - They expose an AWS hostname.
    -  You nornally would want to map that hostname to your domain name.
    -  First option is to use a CNAME, A CNAME record allows us to point a hostname to any other hostname.
-   -  Ex app.mydomain.com **to** alb-1234.ap-southeast-2.elb.amazonaws.com
+   -  Ex app.mydomain.com **to** abc.def.com **[could be anywhere ??]**
    -  this only works if you have a non-root domain name, i.e does not work for mydomain.com, but works for app.mydomain.com
-
+   - Second option : We have alias records, which are specific to Route53.
+   - But, They only allow you to point a hostname to a specific AWS Resource.
+   - Ex : app.mydomain.com TO alb-1234.ap-southeast-2.elb.amazonaws.com
 
 
 
