@@ -359,7 +359,18 @@
    - we can create a CNAME for www.example.com
 5. NS : Name servers for the hosted zone.
    - They are the DNS names or ip addresses of the servers that can respond to the DNS queries for your hosted zone.
-6. Hosted Zone
+6. Hosted Zone : They are a container of records and they will define how to route traffic to a domain and its sub domains.
+7. We have public and private hosted zone.
+8. When ever we buy a public domain name : example.com ; we can create a public hosted zone ;  And this public hosted zone can answer the query : "What is the undelying IP of application1.example.com"
+9. Private hosted zone : These are for domain names that are not publicly available. 
+   - The url application1.example.internal can only be resolved with in a VPC.
+   - This is a private URL with a private DNS record.
+10. CNAME vs ALIAS
+   -  If we have an aws resource like Load balancer or Cloudfront - They expose an AWS hostname.
+   -  You nornally would want to map that hostname to your domain name.
+   -  First option is to use a CNAME, A CNAME record allows us to point a hostname to any other hostname.
+   -  Ex app.mydomain.com **to** alb-1234.ap-southeast-2.elb.amazonaws.com
+   -  this only works if you have a non-root domain name, i.e does not work for mydomain.com, but works for app.mydomain.com
 
 
 
