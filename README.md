@@ -358,7 +358,8 @@
    - we can not create a CNAME for example.com
    - we can create a CNAME for www.example.com
 5. NS : Name servers for the hosted zone.
-   - They are the DNS names or ip addresses of the servers that can respond to the DNS queries for your hosted zone. 
+   - They are the DNS names or ip addresses of the servers that can respond to the DNS queries for your hosted zone.
+6. Hosted Zone
 
 
 
