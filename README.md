@@ -375,6 +375,77 @@
    - But, They only allow you to point a hostname to a specific AWS Resource.
    - Ex : app.mydomain.com TO alb-1234.ap-southeast-2.elb.amazonaws.com
    - These Alias records work for both root and non-root domains.
+   - Ex : mydomain.com pointing to aws resource.
+   - Alias setting can be enabled only on top of A / AAAA records.
+   - The TTl for Alias records are set automatically by Route53.
+   - Targets for Alias records : ELB /  CF / API GW / EBS / S3 websites / VPC Interface Endpoints / Global Accelerator / Route3 Record ?
+   - But, you cant set an alias to an EC2 instance name.
+11. Routing policy
+   - **Simple** :  When client asks for foo.example.com Route53 willreply with an ip 12.13.14.15 if a A record is configured.
+     It is possible for us to specify multiple values in the A record.
+     If multiple values are returned then Client will pick one.
+   - **Weighted** : % of requests to go to a certain resource - testing a small percentage of traffic.
+   -  **Latency** : Redirect to the resource that has the lowest latency.
+   -  Read about Health Checks - calculated health checks /
+   -  **IP Based Routing Policy** : We will defien the routing based on the clients IP addresses
+   -  The list is ips are defined by the CIDR ranges [12.14.123.0/24] in Route53.
+
+12. Domain Registrar vs DNS Service.
+    - We can buy our domain with any domain registrar -  Amazon / Godaddy
+    - The same domain registrar will provide you with a DNS Service to manage your DNS records.
+    - Here - Route53 is used to manage DNS records.
+    - It is possible to not to choose Route53 as your 'DNS service'
+    - You can register your domain with Godaddy - and you can choose Amazon Route53 to manage your DNS records.
+    - In this case - you should create a public hosted zone in Route53, for any domain we want, which will provide you with name servers.
+    - These name servers will replace the name servers in Go daddy website.
+    - Thus when godaddy answers the query - of which name servers to use - it points out to the name servers in a hosted zone of Amazon Route 53.
+
+## VPC
+1. VPS / Subnets /  Internet Gateways / NAT Gateways
+2. Security Groups, Network ACL (NACLs), VPC Flow logs
+3. VPC Peering, VPC Endpoints
+4. Site 2 Site VPN and Direct Connect.
+5. ### VPC
+   - Something like a private network in the AWS cloud to deploy your resources with in it.
+   - This private network that you create is a regional resource.
+   - The private network / VPC  can be partitioned into subnets.
+   - The subnets 1 or 2 or 3 are defined at the Availability zone level.
+   - Public subnet : Can access the internet and internet can access the subnet.
+   - Private subnet : Not accessible from internet
+   - Route Tables : To define access to the internet or between subnets
+6. Big picture.
+   - AWS Cloud
+   - Inside AWS cloud we have AWS regions
+   - Inside Regions we have VPC / many private networks.
+   - Each VPC / Network will have certain IP ranges - VPC CIDR Range
+   - Ex : 10.0.0.0/16
+   - Now Lets say we have two AZ's.
+   - AZ1 - can have a public and private subnet.
+   - And similarly AZ2 also can have a public and private subnet.
+   - The default VPC is created for us in each region of our AWS account.
+   - And there will be only oublic subnets in the AZs belonging to the VPC, in that region..
+   - Now, Internet Gateways and NAT gateways.
+   - Now, Lets say we have an EC2 instance in a public subnet in one of the Az in the region.
+   - What makes the subnet really public ? - We use an Internet Gateway(At the VPC level?)
+   - The IGW will help the resources in our VPC to connect to the internet.
+   - We have found out that the routetable is used for communcation b/w subnets + subnetto internet.
+   - The public subnet [route table ? ] will have a route to Internet GW / The subnet will have a route to IGW.
+   - Now lets say we have an EC2 instance in the private subnet - we might want to access the internet for installing securoty patches - but we dont want the internet to acess this EC2 instance in Private subnet.
+   - For this we use a NAT gateway (AWS Managed) or a NAT Instance (Self managed).
+   - So, How does this work ? WE are going to deploy a NAT gateway or a NAT instance in our public subnet. Then we are going to create a route from our private subnet to the ANT instance or NAT gateway.
+   - The NAT GW/Inst has a route to the IGW
+7. NACLs and Security Groups.
+   - This revolves around security.
+   - NACL : its a firewall that controls traffic from an to a subnet.
+   - This can have allow and Deny rules.
+   - The rules only include IP Addresses. Certain IP addresses are allowed and certain IPs are denied.
+   - They are attached at the subnet level.
+   - NACLs are the first mechanism of defence at our public subnet.
+   - VPC -> Public Subnet -> [ NACL -> [ Security Groups -> EC2 Instance] ]
+   - After NACLs we have security groups -> Which **allow** only certain kind of traffic to an ENI /  EC2 instance.
+   - And These security groups can reference IP Addresses/  other security groups.
+
+
 
 
 
