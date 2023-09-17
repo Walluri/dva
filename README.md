@@ -444,7 +444,9 @@
    - VPC -> Public Subnet -> [ NACL -> [ Security Groups -> EC2 Instance] ]
    - After NACLs we have security groups -> Which **allow** only certain kind of traffic to an ENI /  EC2 instance.
    - And These security groups can reference IP Addresses/  other security groups.
-
+   - Security Groups : REturn traffic is automatically allowed.
+   - VPC Flow logs : We have a lot of traffic flowing through the NACLs and the Security groups, we get all the info in VPC flow logs.
+   - We can this VPC flow logs to S3 / CW / Kinesis DAta Firehose.
 
 
 
