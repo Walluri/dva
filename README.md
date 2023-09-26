@@ -447,6 +447,8 @@
    - Security Groups : REturn traffic is automatically allowed.
    - VPC Flow logs : We have a lot of traffic flowing through the NACLs and the Security groups, we get all the info in VPC flow logs.
    - We can this VPC flow logs to S3 / CW / Kinesis DAta Firehose.
+  
+8. 
 
 
 
